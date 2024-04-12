@@ -20,3 +20,7 @@ C:\Users\grosf\OneDrive\Рабочий стол\WPF проекты с готов
 C:\Users\grosf\OneDrive\Рабочий стол\WPF проекты с готовым кодом\Indigo\Indigo\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\grosf\OneDrive\Рабочий стол\WPF проекты с готовым кодом\Indigo\Indigo\obj\Debug\Indigo_Content.g.cs
 C:\Users\grosf\OneDrive\Рабочий стол\WPF проекты с готовым кодом\Indigo\Indigo\obj\Debug\Indigo.csproj.Up2Date
+C:\Users\grosf\OneDrive\Рабочий стол\WPF проекты с готовым кодом\Indigo\Indigo\obj\Debug\Pages\EditPage.g.cs
+C:\Users\grosf\OneDrive\Рабочий стол\WPF проекты с готовым кодом\Indigo\Indigo\obj\Debug\Pages\ListPage.g.cs
+C:\Users\grosf\OneDrive\Рабочий стол\WPF проекты с готовым кодом\Indigo\Indigo\obj\Debug\Pages\EditPage.baml
+C:\Users\grosf\OneDrive\Рабочий стол\WPF проекты с готовым кодом\Indigo\Indigo\obj\Debug\Pages\ListPage.baml
