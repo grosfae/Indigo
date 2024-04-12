@@ -1,0 +1,1436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VSborkeBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AdditionComputerCaseImage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ComputerCaseId" Type="Int32" Nullable="false" />
+    <Property Name="AdditionImage" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_AdditionComputerCaseImage_ComputerCase" FromRole="AdditionComputerCaseImage" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="AlignmentPowerBlock">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_AlignmentPowerBlock" FromRole="AlignmentPowerBlock" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="BackLiquidCooling">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_BackLiquidCooling" FromRole="BackLiquidCooling" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="BottomLiquidCooling">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_BottomLiquidCooling" FromRole="BottomLiquidCooling" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="ColorRGB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_ColorRGB" FromRole="ColorRGB" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="ComputerCase">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Count" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Discount" Type="Int32" Nullable="false" />
+    <Property Name="FormFactorId" Type="Int32" Nullable="false" />
+    <Property Name="Height" Type="Int32" Nullable="false" />
+    <Property Name="Width" Type="Int32" Nullable="false" />
+    <Property Name="Length" Type="Int32" Nullable="false" />
+    <Property Name="Weight" Type="Single" Nullable="false" />
+    <Property Name="MaterialSetId" Type="Int32" Nullable="false" />
+    <Property Name="MetalThickness" Type="Single" Nullable="false" />
+    <Property Name="WindowOnSide" Type="Boolean" Nullable="false" />
+    <Property Name="WindowAlignmentId" Type="Int32" Nullable="false" />
+    <Property Name="WindowMaterialId" Type="Int32" Nullable="false" />
+    <Property Name="FrontPanelMaterialId" Type="Int32" Nullable="false" />
+    <Property Name="EAtx" Type="Boolean" Nullable="false" />
+    <Property Name="FlexAtx" Type="Boolean" Nullable="false" />
+    <Property Name="MicroAtx" Type="Boolean" Nullable="false" />
+    <Property Name="MiniDtx" Type="Boolean" Nullable="false" />
+    <Property Name="MiniItx" Type="Boolean" Nullable="false" />
+    <Property Name="SsiCeb" Type="Boolean" Nullable="false" />
+    <Property Name="SsiEeb" Type="Boolean" Nullable="false" />
+    <Property Name="StandartAtx" Type="Boolean" Nullable="false" />
+    <Property Name="ThinMiniItx" Type="Boolean" Nullable="false" />
+    <Property Name="XlAtx" Type="Boolean" Nullable="false" />
+    <Property Name="PowerBlockStandartSupportId" Type="Int32" Nullable="false" />
+    <Property Name="AlignmentPowerBlockId" Type="Int32" Nullable="false" />
+    <Property Name="MaxLengthPowerBlock" Type="Int32" Nullable="false" />
+    <Property Name="HorizontalAddonSlotId" Type="Int32" Nullable="false" />
+    <Property Name="VerticalAddonSlotId" Type="Int32" Nullable="false" />
+    <Property Name="MaxLengthVideocard" Type="Int32" Nullable="false" />
+    <Property Name="MaxHeightCPUCooler" Type="Int32" Nullable="false" />
+    <Property Name="SlotSSDId" Type="Int32" Nullable="false" />
+    <Property Name="SlotHDDId" Type="Int32" Nullable="false" />
+    <Property Name="SlotXHDDId" Type="Int32" Nullable="false" />
+    <Property Name="CoolerInsideId" Type="Int32" Nullable="false" />
+    <Property Name="SupportFrontCoolerId" Type="Int32" Nullable="false" />
+    <Property Name="SupportBackCoolerId" Type="Int32" Nullable="false" />
+    <Property Name="SupportTopCoolerId" Type="Int32" Nullable="false" />
+    <Property Name="SupportSideCoolerId" Type="Int32" Nullable="false" />
+    <Property Name="SupportBottomCoolerId" Type="Int32" Nullable="false" />
+    <Property Name="SupportLiquidCooling" Type="Boolean" Nullable="false" />
+    <Property Name="FrontLiquidCoolingId" Type="Int32" Nullable="false" />
+    <Property Name="BackLiquidCoolingId" Type="Int32" Nullable="false" />
+    <Property Name="BottomLiquidCoolingId" Type="Int32" Nullable="false" />
+    <Property Name="SideLiquidCoolingId" Type="Int32" Nullable="false" />
+    <Property Name="TopLiquidCoolingId" Type="Int32" Nullable="false" />
+    <Property Name="OrientationMotherboardId" Type="Int32" Nullable="false" />
+    <Property Name="DustFilter" Type="Boolean" Nullable="false" />
+    <Property Name="PrimaryColorId" Type="Int32" Nullable="false" />
+    <Property Name="SecondColorId" Type="Int32" Nullable="false" />
+    <Property Name="IOPanelAlignmentId" Type="Int32" Nullable="false" />
+    <Property Name="IOPanelId" Type="Int32" Nullable="false" />
+    <Property Name="CutCPUCooler" Type="Boolean" Nullable="false" />
+    <Property Name="CableManagementBackSide" Type="Boolean" Nullable="false" />
+    <Property Name="CardReader" Type="Boolean" Nullable="false" />
+    <Property Name="SidePanelFixationId" Type="Int32" Nullable="false" />
+    <Property Name="RGB" Type="Boolean" Nullable="false" />
+    <Property Name="TypeRGBId" Type="Int32" Nullable="false" />
+    <Property Name="ColorRGBId" Type="Int32" Nullable="false" />
+    <Property Name="TypeManagmentRGBId" Type="Int32" Nullable="false" />
+    <Property Name="SourceRGBId" Type="Int32" Nullable="false" />
+    <Property Name="ConnectorRGBId" Type="Int32" Nullable="false" />
+    <Property Name="MainImage" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ManufacturerId" Type="Int32" Nullable="false" />
+    <Property Name="DeliverySet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsAntiVibration" Type="Boolean" Nullable="false" />
+    <Property Name="IsAccessable" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" Nullable="false" />
+    <Property Name="IsCustom" Type="Boolean" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AdditionComputerCaseImage" Relationship="Self.FK_AdditionComputerCaseImage_ComputerCase" FromRole="ComputerCase" ToRole="AdditionComputerCaseImage" />
+    <NavigationProperty Name="AlignmentPowerBlock" Relationship="Self.FK_ComputerCase_AlignmentPowerBlock" FromRole="ComputerCase" ToRole="AlignmentPowerBlock" />
+    <NavigationProperty Name="BackLiquidCooling" Relationship="Self.FK_ComputerCase_BackLiquidCooling" FromRole="ComputerCase" ToRole="BackLiquidCooling" />
+    <NavigationProperty Name="BottomLiquidCooling" Relationship="Self.FK_ComputerCase_BottomLiquidCooling" FromRole="ComputerCase" ToRole="BottomLiquidCooling" />
+    <NavigationProperty Name="ColorRGB" Relationship="Self.FK_ComputerCase_ColorRGB" FromRole="ComputerCase" ToRole="ColorRGB" />
+    <NavigationProperty Name="ConnectorRGB" Relationship="Self.FK_ComputerCase_ConnectorRGB" FromRole="ComputerCase" ToRole="ConnectorRGB" />
+    <NavigationProperty Name="CoolerInside" Relationship="Self.FK_ComputerCase_CoolerInside" FromRole="ComputerCase" ToRole="CoolerInside" />
+    <NavigationProperty Name="FormFactor" Relationship="Self.FK_ComputerCase_FormFactor" FromRole="ComputerCase" ToRole="FormFactor" />
+    <NavigationProperty Name="FrontLiquidCooling" Relationship="Self.FK_ComputerCase_FrontLiquidCooling" FromRole="ComputerCase" ToRole="FrontLiquidCooling" />
+    <NavigationProperty Name="FrontPanelMaterial" Relationship="Self.FK_ComputerCase_FrontPanelMaterial" FromRole="ComputerCase" ToRole="FrontPanelMaterial" />
+    <NavigationProperty Name="HorizontalAddonSlot" Relationship="Self.FK_ComputerCase_HorizontalAddonSlot1" FromRole="ComputerCase" ToRole="HorizontalAddonSlot" />
+    <NavigationProperty Name="IOPanel" Relationship="Self.FK_ComputerCase_IOPanel" FromRole="ComputerCase" ToRole="IOPanel" />
+    <NavigationProperty Name="IOPanelAlignment" Relationship="Self.FK_ComputerCase_IOPanelAlignment" FromRole="ComputerCase" ToRole="IOPanelAlignment" />
+    <NavigationProperty Name="Manufacturer" Relationship="Self.FK_ComputerCase_Manufacturer" FromRole="ComputerCase" ToRole="Manufacturer" />
+    <NavigationProperty Name="MaterialSet" Relationship="Self.FK_ComputerCase_MaterialSet" FromRole="ComputerCase" ToRole="MaterialSet" />
+    <NavigationProperty Name="OrientationMotherboard" Relationship="Self.FK_ComputerCase_OrientationMotherboard" FromRole="ComputerCase" ToRole="OrientationMotherboard" />
+    <NavigationProperty Name="PowerBlockStandartSupport" Relationship="Self.FK_ComputerCase_PowerBlockStandartSupport" FromRole="ComputerCase" ToRole="PowerBlockStandartSupport" />
+    <NavigationProperty Name="PrimaryColor" Relationship="Self.FK_ComputerCase_PrimaryColor" FromRole="ComputerCase" ToRole="PrimaryColor" />
+    <NavigationProperty Name="SecondColor" Relationship="Self.FK_ComputerCase_SecondColor" FromRole="ComputerCase" ToRole="SecondColor" />
+    <NavigationProperty Name="SideLiquidCooling" Relationship="Self.FK_ComputerCase_SideLiquidCooling" FromRole="ComputerCase" ToRole="SideLiquidCooling" />
+    <NavigationProperty Name="SidePanelFixation" Relationship="Self.FK_ComputerCase_SidePanelFixation1" FromRole="ComputerCase" ToRole="SidePanelFixation" />
+    <NavigationProperty Name="SlotHDD" Relationship="Self.FK_ComputerCase_SlotHDD" FromRole="ComputerCase" ToRole="SlotHDD" />
+    <NavigationProperty Name="SlotSSD" Relationship="Self.FK_ComputerCase_SlotSSD" FromRole="ComputerCase" ToRole="SlotSSD" />
+    <NavigationProperty Name="SlotXHDD" Relationship="Self.FK_ComputerCase_SlotXHDD" FromRole="ComputerCase" ToRole="SlotXHDD" />
+    <NavigationProperty Name="SourceRGB" Relationship="Self.FK_ComputerCase_SourceRGB" FromRole="ComputerCase" ToRole="SourceRGB" />
+    <NavigationProperty Name="SupportBackCooler" Relationship="Self.FK_ComputerCase_SupportBackCooler" FromRole="ComputerCase" ToRole="SupportBackCooler" />
+    <NavigationProperty Name="SupportBottomCooler" Relationship="Self.FK_ComputerCase_SupportBottomCooler" FromRole="ComputerCase" ToRole="SupportBottomCooler" />
+    <NavigationProperty Name="SupportFrontCooler" Relationship="Self.FK_ComputerCase_SupportFrontCooler" FromRole="ComputerCase" ToRole="SupportFrontCooler" />
+    <NavigationProperty Name="SupportSideCooler" Relationship="Self.FK_ComputerCase_SupportSideCooler1" FromRole="ComputerCase" ToRole="SupportSideCooler" />
+    <NavigationProperty Name="SupportTopCooler" Relationship="Self.FK_ComputerCase_SupportTopCooler" FromRole="ComputerCase" ToRole="SupportTopCooler" />
+    <NavigationProperty Name="TopLiquidCooling" Relationship="Self.FK_ComputerCase_TopLiquidCooling" FromRole="ComputerCase" ToRole="TopLiquidCooling" />
+    <NavigationProperty Name="TypeManagmentRGB" Relationship="Self.FK_ComputerCase_TypeManagmentRGB" FromRole="ComputerCase" ToRole="TypeManagmentRGB" />
+    <NavigationProperty Name="TypeRGB" Relationship="Self.FK_ComputerCase_TypeRGB" FromRole="ComputerCase" ToRole="TypeRGB" />
+    <NavigationProperty Name="User" Relationship="Self.FK_ComputerCase_User" FromRole="ComputerCase" ToRole="User" />
+    <NavigationProperty Name="VerticalAddonSlot" Relationship="Self.FK_ComputerCase_VerticalAddonSlot" FromRole="ComputerCase" ToRole="VerticalAddonSlot" />
+    <NavigationProperty Name="WindowAlignment" Relationship="Self.FK_ComputerCase_WindowAlignment" FromRole="ComputerCase" ToRole="WindowAlignment" />
+    <NavigationProperty Name="WindowMaterial" Relationship="Self.FK_ComputerCase_WindowMaterial" FromRole="ComputerCase" ToRole="WindowMaterial" />
+    <NavigationProperty Name="Favourite" Relationship="Self.FK_Favourite_ComputerCase" FromRole="ComputerCase" ToRole="Favourite" />
+    <NavigationProperty Name="FeedBack" Relationship="Self.FK_FeedBack_ComputerCase" FromRole="ComputerCase" ToRole="FeedBack" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Order_ComputerCase" FromRole="ComputerCase" ToRole="Order" />
+    <NavigationProperty Name="PriceHistory" Relationship="Self.FK_PriceHistory_ComputerCase" FromRole="ComputerCase" ToRole="PriceHistory" />
+  </EntityType>
+  <EntityType Name="ConnectorRGB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_ConnectorRGB" FromRole="ConnectorRGB" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="CoolerInside">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_CoolerInside" FromRole="CoolerInside" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="DeliverManOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="DateStart" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DeliveryStatusId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DeliveryStatus" Relationship="Self.FK_DeliverManOrder_DeliveryStatus" FromRole="DeliverManOrder" ToRole="DeliveryStatus" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_DeliverManOrder_Order" FromRole="DeliverManOrder" ToRole="Order" />
+    <NavigationProperty Name="User" Relationship="Self.FK_DeliverManOrder_User" FromRole="DeliverManOrder" ToRole="User" />
+  </EntityType>
+  <EntityType Name="DeliveryStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="DeliverManOrder" Relationship="Self.FK_DeliverManOrder_DeliveryStatus" FromRole="DeliveryStatus" ToRole="DeliverManOrder" />
+  </EntityType>
+  <EntityType Name="Favourite">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ComputerCaseId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_Favourite_ComputerCase" FromRole="Favourite" ToRole="ComputerCase" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Favourite_User" FromRole="Favourite" ToRole="User" />
+  </EntityType>
+  <EntityType Name="FeedBack">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Advantage" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="Disadvantages" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="Comment" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="GeneralStars" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="ComputerCaseId" Type="Int32" Nullable="false" />
+    <Property Name="DateOfReview" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DateOfAddition" Type="DateTime" Precision="0" />
+    <Property Name="Addition" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_FeedBack_ComputerCase" FromRole="FeedBack" ToRole="ComputerCase" />
+    <NavigationProperty Name="User" Relationship="Self.FK_FeedBack_User" FromRole="FeedBack" ToRole="User" />
+  </EntityType>
+  <EntityType Name="FormFactor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_FormFactor" FromRole="FormFactor" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="FrontLiquidCooling">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_FrontLiquidCooling" FromRole="FrontLiquidCooling" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="FrontPanelMaterial">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_FrontPanelMaterial" FromRole="FrontPanelMaterial" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_User_Gender" FromRole="Gender" ToRole="User" />
+  </EntityType>
+  <EntityType Name="HorizontalAddonSlot">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_HorizontalAddonSlot1" FromRole="HorizontalAddonSlot" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="IOPanel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Connectors" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_IOPanel" FromRole="IOPanel" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="IOPanelAlignment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_IOPanelAlignment" FromRole="IOPanelAlignment" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="Manufacturer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_Manufacturer" FromRole="Manufacturer" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="MaterialSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_MaterialSet" FromRole="MaterialSet" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FinallyPrice" Type="Int32" Nullable="false" />
+    <Property Name="GeneralCount" Type="Int32" Nullable="false" />
+    <Property Name="CountInAccessable" Type="Int32" Nullable="false" />
+    <Property Name="CountForCreate" Type="Int32" Nullable="false" />
+    <Property Name="PricePerUnitStock" Type="Int32" Nullable="false" />
+    <Property Name="PricePerUnit" Type="Int32" Nullable="false" />
+    <Property Name="Discount" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryPrice" Type="Int32" Nullable="false" />
+    <Property Name="TotalWeight" Type="Single" Nullable="false" />
+    <Property Name="ComputerCaseId" Type="Int32" Nullable="false" />
+    <Property Name="StatusId" Type="Int32" Nullable="false" />
+    <Property Name="CommentOrder" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="ReasonReject" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FlatNumber" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PrivateHome" Type="Boolean" />
+    <Property Name="UpToFloor" Type="Boolean" />
+    <Property Name="Floor" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="LiftForFullOrder" Type="Boolean" />
+    <Property Name="DateDelivery" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TimeDelivery" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateForConstruct" Type="DateTime" Precision="0" />
+    <Property Name="DateForPocket" Type="DateTime" Precision="0" />
+    <Property Name="DeleteFromHistory" Type="Boolean" />
+    <Property Name="IsAcceptedOperator" Type="Boolean" />
+    <Property Name="IsAcceptedMaster" Type="Boolean" />
+    <Property Name="IsForMaster" Type="Boolean" />
+    <Property Name="IsForStorager" Type="Boolean" />
+    <Property Name="IsForDeliveler" Type="Boolean" />
+    <Property Name="IsReadyMaster" Type="Boolean" />
+    <Property Name="IsRejectedOperator" Type="Boolean" />
+    <Property Name="IsRejectedMaster" Type="Boolean" />
+    <Property Name="IsRejectedStorager" Type="Boolean" />
+    <Property Name="IsPocketed" Type="Boolean" />
+    <Property Name="IsStoraged" Type="Boolean" />
+    <Property Name="IsTakeForDelivery" Type="Boolean" />
+    <Property Name="IsRejectDelivery" Type="Boolean" />
+    <Property Name="IsReject" Type="Boolean" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_Order_ComputerCase" FromRole="Order" ToRole="ComputerCase" />
+    <NavigationProperty Name="DeliverManOrder" Relationship="Self.FK_DeliverManOrder_Order" FromRole="Order" ToRole="DeliverManOrder" />
+    <NavigationProperty Name="Status" Relationship="Self.FK_Order_Status" FromRole="Order" ToRole="Status" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Order_User" FromRole="Order" ToRole="User" />
+  </EntityType>
+  <EntityType Name="OrientationMotherboard">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_OrientationMotherboard" FromRole="OrientationMotherboard" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="PowerBlockStandartSupport">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_PowerBlockStandartSupport" FromRole="PowerBlockStandartSupport" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="PriceHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ComputerCaseId" Type="Int32" Nullable="false" />
+    <Property Name="DateHistory" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_PriceHistory_ComputerCase" FromRole="PriceHistory" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="PrimaryColor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HEXCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_PrimaryColor" FromRole="PrimaryColor" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_User_Role" FromRole="Role" ToRole="User" />
+  </EntityType>
+  <EntityType Name="SecondColor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HEXCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_SecondColor" FromRole="SecondColor" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="SideLiquidCooling">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_SideLiquidCooling" FromRole="SideLiquidCooling" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="SidePanelFixation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_SidePanelFixation1" FromRole="SidePanelFixation" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="SlotHDD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_SlotHDD" FromRole="SlotHDD" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="SlotSSD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_SlotSSD" FromRole="SlotSSD" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="SlotXHDD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_SlotXHDD" FromRole="SlotXHDD" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="SourceRGB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_SourceRGB" FromRole="SourceRGB" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ReadyValue" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Order_Status" FromRole="Status" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="SupportBackCooler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_SupportBackCooler" FromRole="SupportBackCooler" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="SupportBottomCooler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_SupportBottomCooler" FromRole="SupportBottomCooler" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="SupportFrontCooler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_SupportFrontCooler" FromRole="SupportFrontCooler" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="SupportSideCooler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_SupportSideCooler1" FromRole="SupportSideCooler" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="SupportTopCooler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_SupportTopCooler" FromRole="SupportTopCooler" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TopLiquidCooling">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_TopLiquidCooling" FromRole="TopLiquidCooling" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="TypeManagmentRGB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_TypeManagmentRGB" FromRole="TypeManagmentRGB" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="TypeRGB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_TypeRGB" FromRole="TypeRGB" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Patronymic" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GenderId" Type="Int32" />
+    <Property Name="DateRegistration" Type="DateTime" Precision="0" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProfileImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="IsBanned" Type="Boolean" />
+    <Property Name="IsLogged" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_User" FromRole="User" ToRole="ComputerCase" />
+    <NavigationProperty Name="DeliverManOrder" Relationship="Self.FK_DeliverManOrder_User" FromRole="User" ToRole="DeliverManOrder" />
+    <NavigationProperty Name="Favourite" Relationship="Self.FK_Favourite_User" FromRole="User" ToRole="Favourite" />
+    <NavigationProperty Name="FeedBack" Relationship="Self.FK_FeedBack_User" FromRole="User" ToRole="FeedBack" />
+    <NavigationProperty Name="Gender" Relationship="Self.FK_User_Gender" FromRole="User" ToRole="Gender" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Order_User" FromRole="User" ToRole="Order" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_User_Role" FromRole="User" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="VerticalAddonSlot">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_VerticalAddonSlot" FromRole="VerticalAddonSlot" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="WindowAlignment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_WindowAlignment" FromRole="WindowAlignment" ToRole="ComputerCase" />
+  </EntityType>
+  <EntityType Name="WindowMaterial">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ComputerCase" Relationship="Self.FK_ComputerCase_WindowMaterial" FromRole="WindowMaterial" ToRole="ComputerCase" />
+  </EntityType>
+  <Association Name="FK_AdditionComputerCaseImage_ComputerCase">
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="1" />
+    <End Role="AdditionComputerCaseImage" Type="Self.AdditionComputerCaseImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComputerCase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AdditionComputerCaseImage">
+        <PropertyRef Name="ComputerCaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_AlignmentPowerBlock">
+    <End Role="AlignmentPowerBlock" Type="Self.AlignmentPowerBlock" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AlignmentPowerBlock">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="AlignmentPowerBlockId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_BackLiquidCooling">
+    <End Role="BackLiquidCooling" Type="Self.BackLiquidCooling" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BackLiquidCooling">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="BackLiquidCoolingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_BottomLiquidCooling">
+    <End Role="BottomLiquidCooling" Type="Self.BottomLiquidCooling" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BottomLiquidCooling">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="BottomLiquidCoolingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_ColorRGB">
+    <End Role="ColorRGB" Type="Self.ColorRGB" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ColorRGB">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="ColorRGBId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_ConnectorRGB">
+    <End Role="ConnectorRGB" Type="Self.ConnectorRGB" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConnectorRGB">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="ConnectorRGBId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_CoolerInside">
+    <End Role="CoolerInside" Type="Self.CoolerInside" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoolerInside">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="CoolerInsideId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_FormFactor">
+    <End Role="FormFactor" Type="Self.FormFactor" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormFactor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="FormFactorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_FrontLiquidCooling">
+    <End Role="FrontLiquidCooling" Type="Self.FrontLiquidCooling" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FrontLiquidCooling">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="FrontLiquidCoolingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_FrontPanelMaterial">
+    <End Role="FrontPanelMaterial" Type="Self.FrontPanelMaterial" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FrontPanelMaterial">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="FrontPanelMaterialId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_HorizontalAddonSlot1">
+    <End Role="HorizontalAddonSlot" Type="Self.HorizontalAddonSlot" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HorizontalAddonSlot">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="HorizontalAddonSlotId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_IOPanel">
+    <End Role="IOPanel" Type="Self.IOPanel" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IOPanel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="IOPanelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_IOPanelAlignment">
+    <End Role="IOPanelAlignment" Type="Self.IOPanelAlignment" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IOPanelAlignment">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="IOPanelAlignmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_Manufacturer">
+    <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="ManufacturerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_MaterialSet">
+    <End Role="MaterialSet" Type="Self.MaterialSet" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaterialSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="MaterialSetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_OrientationMotherboard">
+    <End Role="OrientationMotherboard" Type="Self.OrientationMotherboard" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrientationMotherboard">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="OrientationMotherboardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_PowerBlockStandartSupport">
+    <End Role="PowerBlockStandartSupport" Type="Self.PowerBlockStandartSupport" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PowerBlockStandartSupport">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="PowerBlockStandartSupportId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_PrimaryColor">
+    <End Role="PrimaryColor" Type="Self.PrimaryColor" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PrimaryColor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="PrimaryColorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_SecondColor">
+    <End Role="SecondColor" Type="Self.SecondColor" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SecondColor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="SecondColorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_SideLiquidCooling">
+    <End Role="SideLiquidCooling" Type="Self.SideLiquidCooling" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SideLiquidCooling">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="SideLiquidCoolingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_SidePanelFixation1">
+    <End Role="SidePanelFixation" Type="Self.SidePanelFixation" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SidePanelFixation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="SidePanelFixationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_SlotHDD">
+    <End Role="SlotHDD" Type="Self.SlotHDD" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SlotHDD">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="SlotHDDId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_SlotSSD">
+    <End Role="SlotSSD" Type="Self.SlotSSD" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SlotSSD">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="SlotSSDId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_SlotXHDD">
+    <End Role="SlotXHDD" Type="Self.SlotXHDD" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SlotXHDD">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="SlotXHDDId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_SourceRGB">
+    <End Role="SourceRGB" Type="Self.SourceRGB" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SourceRGB">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="SourceRGBId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_SupportBackCooler">
+    <End Role="SupportBackCooler" Type="Self.SupportBackCooler" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupportBackCooler">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="SupportBackCoolerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_SupportBottomCooler">
+    <End Role="SupportBottomCooler" Type="Self.SupportBottomCooler" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupportBottomCooler">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="SupportBottomCoolerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_SupportFrontCooler">
+    <End Role="SupportFrontCooler" Type="Self.SupportFrontCooler" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupportFrontCooler">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="SupportFrontCoolerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_SupportSideCooler1">
+    <End Role="SupportSideCooler" Type="Self.SupportSideCooler" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupportSideCooler">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="SupportSideCoolerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_SupportTopCooler">
+    <End Role="SupportTopCooler" Type="Self.SupportTopCooler" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupportTopCooler">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="SupportTopCoolerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_TopLiquidCooling">
+    <End Role="TopLiquidCooling" Type="Self.TopLiquidCooling" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TopLiquidCooling">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="TopLiquidCoolingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_TypeManagmentRGB">
+    <End Role="TypeManagmentRGB" Type="Self.TypeManagmentRGB" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeManagmentRGB">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="TypeManagmentRGBId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_TypeRGB">
+    <End Role="TypeRGB" Type="Self.TypeRGB" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeRGB">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="TypeRGBId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_VerticalAddonSlot">
+    <End Role="VerticalAddonSlot" Type="Self.VerticalAddonSlot" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VerticalAddonSlot">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="VerticalAddonSlotId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_WindowAlignment">
+    <End Role="WindowAlignment" Type="Self.WindowAlignment" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WindowAlignment">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="WindowAlignmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ComputerCase_WindowMaterial">
+    <End Role="WindowMaterial" Type="Self.WindowMaterial" Multiplicity="1" />
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WindowMaterial">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ComputerCase">
+        <PropertyRef Name="WindowMaterialId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Favourite_ComputerCase">
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="1" />
+    <End Role="Favourite" Type="Self.Favourite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComputerCase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Favourite">
+        <PropertyRef Name="ComputerCaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FeedBack_ComputerCase">
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="1" />
+    <End Role="FeedBack" Type="Self.FeedBack" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComputerCase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FeedBack">
+        <PropertyRef Name="ComputerCaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_ComputerCase">
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComputerCase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="ComputerCaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PriceHistory_ComputerCase">
+    <End Role="ComputerCase" Type="Self.ComputerCase" Multiplicity="1" />
+    <End Role="PriceHistory" Type="Self.PriceHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ComputerCase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PriceHistory">
+        <PropertyRef Name="ComputerCaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeliverManOrder_DeliveryStatus">
+    <End Role="DeliveryStatus" Type="Self.DeliveryStatus" Multiplicity="1" />
+    <End Role="DeliverManOrder" Type="Self.DeliverManOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeliveryStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DeliverManOrder">
+        <PropertyRef Name="DeliveryStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeliverManOrder_Order">
+    <End Role="Order" Type="Self.Order" Multiplicity="1" />
+    <End Role="DeliverManOrder" Type="Self.DeliverManOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DeliverManOrder">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeliverManOrder_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="DeliverManOrder" Type="Self.DeliverManOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DeliverManOrder">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Favourite_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Favourite" Type="Self.Favourite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Favourite">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FeedBack_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="FeedBack" Type="Self.FeedBack" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FeedBack">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Gender">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="0..1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="GenderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VSborkeBaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AdditionComputerCaseImage" EntityType="Self.AdditionComputerCaseImage" />
+    <EntitySet Name="AlignmentPowerBlock" EntityType="Self.AlignmentPowerBlock" />
+    <EntitySet Name="BackLiquidCooling" EntityType="Self.BackLiquidCooling" />
+    <EntitySet Name="BottomLiquidCooling" EntityType="Self.BottomLiquidCooling" />
+    <EntitySet Name="ColorRGB" EntityType="Self.ColorRGB" />
+    <EntitySet Name="ComputerCase" EntityType="Self.ComputerCase" />
+    <EntitySet Name="ConnectorRGB" EntityType="Self.ConnectorRGB" />
+    <EntitySet Name="CoolerInside" EntityType="Self.CoolerInside" />
+    <EntitySet Name="DeliverManOrder" EntityType="Self.DeliverManOrder" />
+    <EntitySet Name="DeliveryStatus" EntityType="Self.DeliveryStatus" />
+    <EntitySet Name="Favourite" EntityType="Self.Favourite" />
+    <EntitySet Name="FeedBack" EntityType="Self.FeedBack" />
+    <EntitySet Name="FormFactor" EntityType="Self.FormFactor" />
+    <EntitySet Name="FrontLiquidCooling" EntityType="Self.FrontLiquidCooling" />
+    <EntitySet Name="FrontPanelMaterial" EntityType="Self.FrontPanelMaterial" />
+    <EntitySet Name="Gender" EntityType="Self.Gender" />
+    <EntitySet Name="HorizontalAddonSlot" EntityType="Self.HorizontalAddonSlot" />
+    <EntitySet Name="IOPanel" EntityType="Self.IOPanel" />
+    <EntitySet Name="IOPanelAlignment" EntityType="Self.IOPanelAlignment" />
+    <EntitySet Name="Manufacturer" EntityType="Self.Manufacturer" />
+    <EntitySet Name="MaterialSet" EntityType="Self.MaterialSet" />
+    <EntitySet Name="Order" EntityType="Self.Order" />
+    <EntitySet Name="OrientationMotherboard" EntityType="Self.OrientationMotherboard" />
+    <EntitySet Name="PowerBlockStandartSupport" EntityType="Self.PowerBlockStandartSupport" />
+    <EntitySet Name="PriceHistory" EntityType="Self.PriceHistory" />
+    <EntitySet Name="PrimaryColor" EntityType="Self.PrimaryColor" />
+    <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="SecondColor" EntityType="Self.SecondColor" />
+    <EntitySet Name="SideLiquidCooling" EntityType="Self.SideLiquidCooling" />
+    <EntitySet Name="SidePanelFixation" EntityType="Self.SidePanelFixation" />
+    <EntitySet Name="SlotHDD" EntityType="Self.SlotHDD" />
+    <EntitySet Name="SlotSSD" EntityType="Self.SlotSSD" />
+    <EntitySet Name="SlotXHDD" EntityType="Self.SlotXHDD" />
+    <EntitySet Name="SourceRGB" EntityType="Self.SourceRGB" />
+    <EntitySet Name="Status" EntityType="Self.Status" />
+    <EntitySet Name="SupportBackCooler" EntityType="Self.SupportBackCooler" />
+    <EntitySet Name="SupportBottomCooler" EntityType="Self.SupportBottomCooler" />
+    <EntitySet Name="SupportFrontCooler" EntityType="Self.SupportFrontCooler" />
+    <EntitySet Name="SupportSideCooler" EntityType="Self.SupportSideCooler" />
+    <EntitySet Name="SupportTopCooler" EntityType="Self.SupportTopCooler" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TopLiquidCooling" EntityType="Self.TopLiquidCooling" />
+    <EntitySet Name="TypeManagmentRGB" EntityType="Self.TypeManagmentRGB" />
+    <EntitySet Name="TypeRGB" EntityType="Self.TypeRGB" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <EntitySet Name="VerticalAddonSlot" EntityType="Self.VerticalAddonSlot" />
+    <EntitySet Name="WindowAlignment" EntityType="Self.WindowAlignment" />
+    <EntitySet Name="WindowMaterial" EntityType="Self.WindowMaterial" />
+    <AssociationSet Name="FK_AdditionComputerCaseImage_ComputerCase" Association="Self.FK_AdditionComputerCaseImage_ComputerCase">
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+      <End Role="AdditionComputerCaseImage" EntitySet="AdditionComputerCaseImage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_AlignmentPowerBlock" Association="Self.FK_ComputerCase_AlignmentPowerBlock">
+      <End Role="AlignmentPowerBlock" EntitySet="AlignmentPowerBlock" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_BackLiquidCooling" Association="Self.FK_ComputerCase_BackLiquidCooling">
+      <End Role="BackLiquidCooling" EntitySet="BackLiquidCooling" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_BottomLiquidCooling" Association="Self.FK_ComputerCase_BottomLiquidCooling">
+      <End Role="BottomLiquidCooling" EntitySet="BottomLiquidCooling" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_ColorRGB" Association="Self.FK_ComputerCase_ColorRGB">
+      <End Role="ColorRGB" EntitySet="ColorRGB" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_ConnectorRGB" Association="Self.FK_ComputerCase_ConnectorRGB">
+      <End Role="ConnectorRGB" EntitySet="ConnectorRGB" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_CoolerInside" Association="Self.FK_ComputerCase_CoolerInside">
+      <End Role="CoolerInside" EntitySet="CoolerInside" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_FormFactor" Association="Self.FK_ComputerCase_FormFactor">
+      <End Role="FormFactor" EntitySet="FormFactor" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_FrontLiquidCooling" Association="Self.FK_ComputerCase_FrontLiquidCooling">
+      <End Role="FrontLiquidCooling" EntitySet="FrontLiquidCooling" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_FrontPanelMaterial" Association="Self.FK_ComputerCase_FrontPanelMaterial">
+      <End Role="FrontPanelMaterial" EntitySet="FrontPanelMaterial" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_HorizontalAddonSlot1" Association="Self.FK_ComputerCase_HorizontalAddonSlot1">
+      <End Role="HorizontalAddonSlot" EntitySet="HorizontalAddonSlot" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_IOPanel" Association="Self.FK_ComputerCase_IOPanel">
+      <End Role="IOPanel" EntitySet="IOPanel" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_IOPanelAlignment" Association="Self.FK_ComputerCase_IOPanelAlignment">
+      <End Role="IOPanelAlignment" EntitySet="IOPanelAlignment" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_Manufacturer" Association="Self.FK_ComputerCase_Manufacturer">
+      <End Role="Manufacturer" EntitySet="Manufacturer" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_MaterialSet" Association="Self.FK_ComputerCase_MaterialSet">
+      <End Role="MaterialSet" EntitySet="MaterialSet" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_OrientationMotherboard" Association="Self.FK_ComputerCase_OrientationMotherboard">
+      <End Role="OrientationMotherboard" EntitySet="OrientationMotherboard" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_PowerBlockStandartSupport" Association="Self.FK_ComputerCase_PowerBlockStandartSupport">
+      <End Role="PowerBlockStandartSupport" EntitySet="PowerBlockStandartSupport" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_PrimaryColor" Association="Self.FK_ComputerCase_PrimaryColor">
+      <End Role="PrimaryColor" EntitySet="PrimaryColor" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_SecondColor" Association="Self.FK_ComputerCase_SecondColor">
+      <End Role="SecondColor" EntitySet="SecondColor" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_SideLiquidCooling" Association="Self.FK_ComputerCase_SideLiquidCooling">
+      <End Role="SideLiquidCooling" EntitySet="SideLiquidCooling" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_SidePanelFixation1" Association="Self.FK_ComputerCase_SidePanelFixation1">
+      <End Role="SidePanelFixation" EntitySet="SidePanelFixation" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_SlotHDD" Association="Self.FK_ComputerCase_SlotHDD">
+      <End Role="SlotHDD" EntitySet="SlotHDD" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_SlotSSD" Association="Self.FK_ComputerCase_SlotSSD">
+      <End Role="SlotSSD" EntitySet="SlotSSD" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_SlotXHDD" Association="Self.FK_ComputerCase_SlotXHDD">
+      <End Role="SlotXHDD" EntitySet="SlotXHDD" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_SourceRGB" Association="Self.FK_ComputerCase_SourceRGB">
+      <End Role="SourceRGB" EntitySet="SourceRGB" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_SupportBackCooler" Association="Self.FK_ComputerCase_SupportBackCooler">
+      <End Role="SupportBackCooler" EntitySet="SupportBackCooler" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_SupportBottomCooler" Association="Self.FK_ComputerCase_SupportBottomCooler">
+      <End Role="SupportBottomCooler" EntitySet="SupportBottomCooler" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_SupportFrontCooler" Association="Self.FK_ComputerCase_SupportFrontCooler">
+      <End Role="SupportFrontCooler" EntitySet="SupportFrontCooler" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_SupportSideCooler1" Association="Self.FK_ComputerCase_SupportSideCooler1">
+      <End Role="SupportSideCooler" EntitySet="SupportSideCooler" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_SupportTopCooler" Association="Self.FK_ComputerCase_SupportTopCooler">
+      <End Role="SupportTopCooler" EntitySet="SupportTopCooler" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_TopLiquidCooling" Association="Self.FK_ComputerCase_TopLiquidCooling">
+      <End Role="TopLiquidCooling" EntitySet="TopLiquidCooling" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_TypeManagmentRGB" Association="Self.FK_ComputerCase_TypeManagmentRGB">
+      <End Role="TypeManagmentRGB" EntitySet="TypeManagmentRGB" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_TypeRGB" Association="Self.FK_ComputerCase_TypeRGB">
+      <End Role="TypeRGB" EntitySet="TypeRGB" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_User" Association="Self.FK_ComputerCase_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_VerticalAddonSlot" Association="Self.FK_ComputerCase_VerticalAddonSlot">
+      <End Role="VerticalAddonSlot" EntitySet="VerticalAddonSlot" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_WindowAlignment" Association="Self.FK_ComputerCase_WindowAlignment">
+      <End Role="WindowAlignment" EntitySet="WindowAlignment" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ComputerCase_WindowMaterial" Association="Self.FK_ComputerCase_WindowMaterial">
+      <End Role="WindowMaterial" EntitySet="WindowMaterial" />
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Favourite_ComputerCase" Association="Self.FK_Favourite_ComputerCase">
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+      <End Role="Favourite" EntitySet="Favourite" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FeedBack_ComputerCase" Association="Self.FK_FeedBack_ComputerCase">
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+      <End Role="FeedBack" EntitySet="FeedBack" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_ComputerCase" Association="Self.FK_Order_ComputerCase">
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PriceHistory_ComputerCase" Association="Self.FK_PriceHistory_ComputerCase">
+      <End Role="ComputerCase" EntitySet="ComputerCase" />
+      <End Role="PriceHistory" EntitySet="PriceHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeliverManOrder_DeliveryStatus" Association="Self.FK_DeliverManOrder_DeliveryStatus">
+      <End Role="DeliveryStatus" EntitySet="DeliveryStatus" />
+      <End Role="DeliverManOrder" EntitySet="DeliverManOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeliverManOrder_Order" Association="Self.FK_DeliverManOrder_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="DeliverManOrder" EntitySet="DeliverManOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeliverManOrder_User" Association="Self.FK_DeliverManOrder_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="DeliverManOrder" EntitySet="DeliverManOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Favourite_User" Association="Self.FK_Favourite_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Favourite" EntitySet="Favourite" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FeedBack_User" Association="Self.FK_FeedBack_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="FeedBack" EntitySet="FeedBack" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Gender" Association="Self.FK_User_Gender">
+      <End Role="Gender" EntitySet="Gender" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Status" Association="Self.FK_Order_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_User" Association="Self.FK_Order_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

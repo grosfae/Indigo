@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище VSborkeBaseModelContainer" CdmEntityContainer="VSborkeBaseEntities">
+    <EntitySetMapping Name="AdditionComputerCaseImage">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.AdditionComputerCaseImage">
+        <MappingFragment StoreEntitySet="AdditionComputerCaseImage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ComputerCaseId" ColumnName="ComputerCaseId" />
+          <ScalarProperty Name="AdditionImage" ColumnName="AdditionImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlignmentPowerBlock">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.AlignmentPowerBlock">
+        <MappingFragment StoreEntitySet="AlignmentPowerBlock">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackLiquidCooling">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.BackLiquidCooling">
+        <MappingFragment StoreEntitySet="BackLiquidCooling">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BottomLiquidCooling">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.BottomLiquidCooling">
+        <MappingFragment StoreEntitySet="BottomLiquidCooling">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ColorRGB">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.ColorRGB">
+        <MappingFragment StoreEntitySet="ColorRGB">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComputerCase">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.ComputerCase">
+        <MappingFragment StoreEntitySet="ComputerCase">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="FormFactorId" ColumnName="FormFactorId" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="MaterialSetId" ColumnName="MaterialSetId" />
+          <ScalarProperty Name="MetalThickness" ColumnName="MetalThickness" />
+          <ScalarProperty Name="WindowOnSide" ColumnName="WindowOnSide" />
+          <ScalarProperty Name="WindowAlignmentId" ColumnName="WindowAlignmentId" />
+          <ScalarProperty Name="WindowMaterialId" ColumnName="WindowMaterialId" />
+          <ScalarProperty Name="FrontPanelMaterialId" ColumnName="FrontPanelMaterialId" />
+          <ScalarProperty Name="EAtx" ColumnName="EAtx" />
+          <ScalarProperty Name="FlexAtx" ColumnName="FlexAtx" />
+          <ScalarProperty Name="MicroAtx" ColumnName="MicroAtx" />
+          <ScalarProperty Name="MiniDtx" ColumnName="MiniDtx" />
+          <ScalarProperty Name="MiniItx" ColumnName="MiniItx" />
+          <ScalarProperty Name="SsiCeb" ColumnName="SsiCeb" />
+          <ScalarProperty Name="SsiEeb" ColumnName="SsiEeb" />
+          <ScalarProperty Name="StandartAtx" ColumnName="StandartAtx" />
+          <ScalarProperty Name="ThinMiniItx" ColumnName="ThinMiniItx" />
+          <ScalarProperty Name="XlAtx" ColumnName="XlAtx" />
+          <ScalarProperty Name="PowerBlockStandartSupportId" ColumnName="PowerBlockStandartSupportId" />
+          <ScalarProperty Name="AlignmentPowerBlockId" ColumnName="AlignmentPowerBlockId" />
+          <ScalarProperty Name="MaxLengthPowerBlock" ColumnName="MaxLengthPowerBlock" />
+          <ScalarProperty Name="HorizontalAddonSlotId" ColumnName="HorizontalAddonSlotId" />
+          <ScalarProperty Name="VerticalAddonSlotId" ColumnName="VerticalAddonSlotId" />
+          <ScalarProperty Name="MaxLengthVideocard" ColumnName="MaxLengthVideocard" />
+          <ScalarProperty Name="MaxHeightCPUCooler" ColumnName="MaxHeightCPUCooler" />
+          <ScalarProperty Name="SlotSSDId" ColumnName="SlotSSDId" />
+          <ScalarProperty Name="SlotHDDId" ColumnName="SlotHDDId" />
+          <ScalarProperty Name="SlotXHDDId" ColumnName="SlotXHDDId" />
+          <ScalarProperty Name="CoolerInsideId" ColumnName="CoolerInsideId" />
+          <ScalarProperty Name="SupportFrontCoolerId" ColumnName="SupportFrontCoolerId" />
+          <ScalarProperty Name="SupportBackCoolerId" ColumnName="SupportBackCoolerId" />
+          <ScalarProperty Name="SupportTopCoolerId" ColumnName="SupportTopCoolerId" />
+          <ScalarProperty Name="SupportSideCoolerId" ColumnName="SupportSideCoolerId" />
+          <ScalarProperty Name="SupportBottomCoolerId" ColumnName="SupportBottomCoolerId" />
+          <ScalarProperty Name="SupportLiquidCooling" ColumnName="SupportLiquidCooling" />
+          <ScalarProperty Name="FrontLiquidCoolingId" ColumnName="FrontLiquidCoolingId" />
+          <ScalarProperty Name="BackLiquidCoolingId" ColumnName="BackLiquidCoolingId" />
+          <ScalarProperty Name="BottomLiquidCoolingId" ColumnName="BottomLiquidCoolingId" />
+          <ScalarProperty Name="SideLiquidCoolingId" ColumnName="SideLiquidCoolingId" />
+          <ScalarProperty Name="TopLiquidCoolingId" ColumnName="TopLiquidCoolingId" />
+          <ScalarProperty Name="OrientationMotherboardId" ColumnName="OrientationMotherboardId" />
+          <ScalarProperty Name="DustFilter" ColumnName="DustFilter" />
+          <ScalarProperty Name="PrimaryColorId" ColumnName="PrimaryColorId" />
+          <ScalarProperty Name="SecondColorId" ColumnName="SecondColorId" />
+          <ScalarProperty Name="IOPanelAlignmentId" ColumnName="IOPanelAlignmentId" />
+          <ScalarProperty Name="IOPanelId" ColumnName="IOPanelId" />
+          <ScalarProperty Name="CutCPUCooler" ColumnName="CutCPUCooler" />
+          <ScalarProperty Name="CableManagementBackSide" ColumnName="CableManagementBackSide" />
+          <ScalarProperty Name="CardReader" ColumnName="CardReader" />
+          <ScalarProperty Name="SidePanelFixationId" ColumnName="SidePanelFixationId" />
+          <ScalarProperty Name="RGB" ColumnName="RGB" />
+          <ScalarProperty Name="TypeRGBId" ColumnName="TypeRGBId" />
+          <ScalarProperty Name="ColorRGBId" ColumnName="ColorRGBId" />
+          <ScalarProperty Name="TypeManagmentRGBId" ColumnName="TypeManagmentRGBId" />
+          <ScalarProperty Name="SourceRGBId" ColumnName="SourceRGBId" />
+          <ScalarProperty Name="ConnectorRGBId" ColumnName="ConnectorRGBId" />
+          <ScalarProperty Name="MainImage" ColumnName="MainImage" />
+          <ScalarProperty Name="ManufacturerId" ColumnName="ManufacturerId" />
+          <ScalarProperty Name="DeliverySet" ColumnName="DeliverySet" />
+          <ScalarProperty Name="IsAntiVibration" ColumnName="IsAntiVibration" />
+          <ScalarProperty Name="IsAccessable" ColumnName="IsAccessable" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsCustom" ColumnName="IsCustom" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConnectorRGB">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.ConnectorRGB">
+        <MappingFragment StoreEntitySet="ConnectorRGB">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoolerInside">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.CoolerInside">
+        <MappingFragment StoreEntitySet="CoolerInside">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeliverManOrder">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.DeliverManOrder">
+        <MappingFragment StoreEntitySet="DeliverManOrder">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="DeliveryStatusId" ColumnName="DeliveryStatusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeliveryStatus">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.DeliveryStatus">
+        <MappingFragment StoreEntitySet="DeliveryStatus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Favourite">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.Favourite">
+        <MappingFragment StoreEntitySet="Favourite">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ComputerCaseId" ColumnName="ComputerCaseId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FeedBack">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.FeedBack">
+        <MappingFragment StoreEntitySet="FeedBack">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Advantage" ColumnName="Advantage" />
+          <ScalarProperty Name="Disadvantages" ColumnName="Disadvantages" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="GeneralStars" ColumnName="GeneralStars" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ComputerCaseId" ColumnName="ComputerCaseId" />
+          <ScalarProperty Name="DateOfReview" ColumnName="DateOfReview" />
+          <ScalarProperty Name="DateOfAddition" ColumnName="DateOfAddition" />
+          <ScalarProperty Name="Addition" ColumnName="Addition" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormFactor">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.FormFactor">
+        <MappingFragment StoreEntitySet="FormFactor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FrontLiquidCooling">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.FrontLiquidCooling">
+        <MappingFragment StoreEntitySet="FrontLiquidCooling">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FrontPanelMaterial">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.FrontPanelMaterial">
+        <MappingFragment StoreEntitySet="FrontPanelMaterial">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gender">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.Gender">
+        <MappingFragment StoreEntitySet="Gender">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HorizontalAddonSlot">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.HorizontalAddonSlot">
+        <MappingFragment StoreEntitySet="HorizontalAddonSlot">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IOPanel">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.IOPanel">
+        <MappingFragment StoreEntitySet="IOPanel">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Connectors" ColumnName="Connectors" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IOPanelAlignment">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.IOPanelAlignment">
+        <MappingFragment StoreEntitySet="IOPanelAlignment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufacturer">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.Manufacturer">
+        <MappingFragment StoreEntitySet="Manufacturer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaterialSet">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.MaterialSet">
+        <MappingFragment StoreEntitySet="MaterialSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="FinallyPrice" ColumnName="FinallyPrice" />
+          <ScalarProperty Name="GeneralCount" ColumnName="GeneralCount" />
+          <ScalarProperty Name="CountInAccessable" ColumnName="CountInAccessable" />
+          <ScalarProperty Name="CountForCreate" ColumnName="CountForCreate" />
+          <ScalarProperty Name="PricePerUnitStock" ColumnName="PricePerUnitStock" />
+          <ScalarProperty Name="PricePerUnit" ColumnName="PricePerUnit" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="DeliveryPrice" ColumnName="DeliveryPrice" />
+          <ScalarProperty Name="TotalWeight" ColumnName="TotalWeight" />
+          <ScalarProperty Name="ComputerCaseId" ColumnName="ComputerCaseId" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="CommentOrder" ColumnName="CommentOrder" />
+          <ScalarProperty Name="ReasonReject" ColumnName="ReasonReject" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FlatNumber" ColumnName="FlatNumber" />
+          <ScalarProperty Name="PrivateHome" ColumnName="PrivateHome" />
+          <ScalarProperty Name="UpToFloor" ColumnName="UpToFloor" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="LiftForFullOrder" ColumnName="LiftForFullOrder" />
+          <ScalarProperty Name="DateDelivery" ColumnName="DateDelivery" />
+          <ScalarProperty Name="TimeDelivery" ColumnName="TimeDelivery" />
+          <ScalarProperty Name="DateForConstruct" ColumnName="DateForConstruct" />
+          <ScalarProperty Name="DateForPocket" ColumnName="DateForPocket" />
+          <ScalarProperty Name="DeleteFromHistory" ColumnName="DeleteFromHistory" />
+          <ScalarProperty Name="IsAcceptedOperator" ColumnName="IsAcceptedOperator" />
+          <ScalarProperty Name="IsAcceptedMaster" ColumnName="IsAcceptedMaster" />
+          <ScalarProperty Name="IsForMaster" ColumnName="IsForMaster" />
+          <ScalarProperty Name="IsForStorager" ColumnName="IsForStorager" />
+          <ScalarProperty Name="IsForDeliveler" ColumnName="IsForDeliveler" />
+          <ScalarProperty Name="IsReadyMaster" ColumnName="IsReadyMaster" />
+          <ScalarProperty Name="IsRejectedOperator" ColumnName="IsRejectedOperator" />
+          <ScalarProperty Name="IsRejectedMaster" ColumnName="IsRejectedMaster" />
+          <ScalarProperty Name="IsRejectedStorager" ColumnName="IsRejectedStorager" />
+          <ScalarProperty Name="IsPocketed" ColumnName="IsPocketed" />
+          <ScalarProperty Name="IsStoraged" ColumnName="IsStoraged" />
+          <ScalarProperty Name="IsTakeForDelivery" ColumnName="IsTakeForDelivery" />
+          <ScalarProperty Name="IsRejectDelivery" ColumnName="IsRejectDelivery" />
+          <ScalarProperty Name="IsReject" ColumnName="IsReject" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrientationMotherboard">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.OrientationMotherboard">
+        <MappingFragment StoreEntitySet="OrientationMotherboard">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PowerBlockStandartSupport">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.PowerBlockStandartSupport">
+        <MappingFragment StoreEntitySet="PowerBlockStandartSupport">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PriceHistory">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.PriceHistory">
+        <MappingFragment StoreEntitySet="PriceHistory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ComputerCaseId" ColumnName="ComputerCaseId" />
+          <ScalarProperty Name="DateHistory" ColumnName="DateHistory" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrimaryColor">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.PrimaryColor">
+        <MappingFragment StoreEntitySet="PrimaryColor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="HEXCode" ColumnName="HEXCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SecondColor">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.SecondColor">
+        <MappingFragment StoreEntitySet="SecondColor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="HEXCode" ColumnName="HEXCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SideLiquidCooling">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.SideLiquidCooling">
+        <MappingFragment StoreEntitySet="SideLiquidCooling">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SidePanelFixation">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.SidePanelFixation">
+        <MappingFragment StoreEntitySet="SidePanelFixation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SlotHDD">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.SlotHDD">
+        <MappingFragment StoreEntitySet="SlotHDD">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SlotSSD">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.SlotSSD">
+        <MappingFragment StoreEntitySet="SlotSSD">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SlotXHDD">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.SlotXHDD">
+        <MappingFragment StoreEntitySet="SlotXHDD">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SourceRGB">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.SourceRGB">
+        <MappingFragment StoreEntitySet="SourceRGB">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ReadyValue" ColumnName="ReadyValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupportBackCooler">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.SupportBackCooler">
+        <MappingFragment StoreEntitySet="SupportBackCooler">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupportBottomCooler">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.SupportBottomCooler">
+        <MappingFragment StoreEntitySet="SupportBottomCooler">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupportFrontCooler">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.SupportFrontCooler">
+        <MappingFragment StoreEntitySet="SupportFrontCooler">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupportSideCooler">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.SupportSideCooler">
+        <MappingFragment StoreEntitySet="SupportSideCooler">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupportTopCooler">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.SupportTopCooler">
+        <MappingFragment StoreEntitySet="SupportTopCooler">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TopLiquidCooling">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.TopLiquidCooling">
+        <MappingFragment StoreEntitySet="TopLiquidCooling">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeManagmentRGB">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.TypeManagmentRGB">
+        <MappingFragment StoreEntitySet="TypeManagmentRGB">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeRGB">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.TypeRGB">
+        <MappingFragment StoreEntitySet="TypeRGB">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+          <ScalarProperty Name="DateRegistration" ColumnName="DateRegistration" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ProfileImage" ColumnName="ProfileImage" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="IsBanned" ColumnName="IsBanned" />
+          <ScalarProperty Name="IsLogged" ColumnName="IsLogged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VerticalAddonSlot">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.VerticalAddonSlot">
+        <MappingFragment StoreEntitySet="VerticalAddonSlot">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WindowAlignment">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.WindowAlignment">
+        <MappingFragment StoreEntitySet="WindowAlignment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WindowMaterial">
+      <EntityTypeMapping TypeName="VSborkeBaseModel.WindowMaterial">
+        <MappingFragment StoreEntitySet="WindowMaterial">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
